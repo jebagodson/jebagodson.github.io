@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AKSAYA - Investor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="kgetechnologies.com" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="images/aksaya logo.png">
+
+    <!-- App css -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/style.css" rel="stylesheet" type="text/css" />
+
+    <!--Script-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <div class="navbar navbar-expand flex-column flex-md-row navbar-custom">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <a href="index.html" class="navbar-brand mr-0 mr-md-2 logo">
+                    <span class="logo-lg">
+                        <img class="logo-style" src="images/aksaya logo.png" alt="logo" />
+                        <span class="d-inline h5 ml-1 text-logo">AKSAYA</span>
+                    </span>
+                    <span class="logo-sm">
+                        <img src="images/aksaya logo.png" alt="" height="24">
+                    </span>
+                </a>
+                <ul class="navbar-nav bd-navbar-nav flex-row list-unstyled menu-left mb-0">
+                    <li class="">
+                        <button class="button-menu-mobile open-left disable-btn">
+                            <i data-feather="menu" class="menu-icon"></i>
+                            <i data-feather="x" class="close-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto d-flex topnav-menu float-right mb-0">
+                    <li class="dropdown notification-list" data-toggle="tooltip" data-placement="left" title=""
+                        data-original-title="3 new unread notifications">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false"><i data-feather="message-square"
+                                class="menu-icon"></i>
+
+                            <span class="noti-icon-badge"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                            <!-- item-->
+                            <div class="dropdown-item noti-title border-bottom">
+                                <h5 class="m-0 font-size-16">
+                                    <span class="float-right">
+                                        <a href="" class="text-dark">
+                                            <small>Clear All</small>
+                                        </a>
+                                    </span>Inbox Message
+                                </h5>
+                            </div>
+
+                            <div class="slimScrollDiv"
+                                style="position: relative; overflow: hidden; width: auto; height: 507px;">
+                                <div class="slimscroll noti-scroll"
+                                    style="overflow: hidden; width: auto; height: 507px;">
+
+                                    <!-- item-->
+                                    <a href="inbox.html" class="dropdown-item notify-item border-bottom active">
+                                        <div class="notify-icon bg-success"><i data-feather="user"></i>
+                                        </div>
+                                        <p class="notify-details">Message Jaclyn Brunswick<small class="text-muted">1
+                                                min
+                                                ago</small></p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="inbox.html" class="dropdown-item notify-item border-bottom">
+                                        <div class="notify-icon bg-danger"><i data-feather="user"></i>
+                                        </div>
+                                        <p class="notify-details">Message Caleb Flakelar<small class="text-muted">4 days
+                                                ago</small></p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="inbox.html" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-primary">
+                                            <i data-feather="user"></i>
+                                        </div>
+                                        <p class="notify-details">Message Carlos Crouch
+                                            <small class="text-muted">13 days ago</small>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="slimScrollBar"
+                                    style="background: rgb(158, 165, 171); width: 4px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;">
+                                </div>
+                                <div class="slimScrollRail"
+                                    style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+                                </div>
+                            </div>
+
+                            <!-- All-->
+                            <a href="inbox.html"
+                                class="dropdown-item text-center text-primary notify-item notify-all border-top">
+                                View all
+                                <i class="fi-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="media user-profile mt-2 mb-2">
+                    <img src="images/avatar-7.jpg" class="avatar-sm rounded-circle mr-2" alt="Aksaya" />
+                    <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2" alt="Aksaya" />
+
+                    <div class="media-body">
+                        <h6 class="pro-user-name mt-0 mb-0">Nik Patel</h6>
+                        <span class="pro-user-desc">Administrator</span>
+                    </div>
+                    <div class="dropdown align-self-center profile-dropdown-menu">
+                        <a class="dropdown-toggle mr-0" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <span data-feather="chevron-down"></span>
+                        </a>
+                        <div class="dropdown-menu profile-dropdown dropdown-position">
+                            <a href="myaccount.html" class="dropdown-item notify-item">
+                                <i data-feather="user" class="icon-dual icon-xs mr-2"></i>
+                                <span>My Account</span>
+                            </a>
+                            <a href="#" class="dropdown-item notify-item">
+                                <i data-feather="help-circle" class="icon-dual icon-xs mr-2"></i>
+                                <span data-toggle="modal" data-target="#exampleModal">Support</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item notify-item">
+                                <i data-feather="log-out" class="icon-dual icon-xs mr-2"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Popup Window -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">CONTACT</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <a class="align-self-center" href="https://kgetechnologies.com"
+                            target="_blank">kgetechnologies.com</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Popup Window END-->
+
+        <!-- Left Sidebar -->
+        <div class="left-side-menu">
+            <div class="sidebar-content">
+                <!--- Sidemenu -->
+                <div id="sidebar-menu" class="slimscroll-menu">
+                    <ul class="metismenu" id="menu-bar">
+                        <li class="menu-title">Navigation</li>
+
+                        <li>
+                            <a href="index.html">
+                                <i data-feather="home"></i>
+                                <span> Dashboard </span>
+                            </a>
+                        </li>
+                        <!--USER TAB-->
+                        <li class="menu-title">User</li>
+                        <li>
+                            <a href="pages-register.html">
+                                <i data-feather="user"></i>
+                                <span> Create User </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-user.html">
+                                <i data-feather="edit"></i>
+                                <span> Manage User </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="password-reset.html">
+                                <i data-feather="key"></i>
+                                <span> Password Reset </span>
+                            </a>
+                        </li>
+                        <!--END USER TAB-->
+                        <!--EMPLOYEE TAB-->
+                        <li class="menu-title">Employee</li>
+                        <li>
+                            <a href="upload-attendance.html">
+                                <i data-feather="file-text"></i>
+                                <span> Upload Attendance </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="payscale-view.html">
+                                <i data-feather="archive"></i>
+                                <span> Payslip View </span>
+                            </a>
+                        </li>
+                        <!--END EMPLOYEE TAB-->
+                        <!--INVESTOR TAB-->
+                        <li class="menu-title">Investor</li>
+                        <li>
+                            <a href="create-investment.html">
+                                <i data-feather="activity"></i>
+                                <span> Create Investment </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="generate-returns.html">
+                                <i data-feather="dollar-sign"></i>
+                                <span> Generate Returns </span>
+                            </a>
+                        </li>
+                        <li class="mm-active">
+                            <a href="view-returns.html" class="active">
+                                <i data-feather="file"></i>
+                                <span> View Returns </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="approve-investment.html">
+                                <i data-feather="check"></i>
+                                <span>Approve Investment </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="close-investment.html">
+                                <i data-feather="x-square"></i>
+                                <span> Close Investment </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-investment.html">
+                                <i data-feather="layers"></i>
+                                <span> Manage Investment </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-plans.html">
+                                <i data-feather="layers"></i>
+                                <span> Manage Plans </span>
+                            </a>
+                        </li>
+                        <!--END INVESTOR TAB-->
+                        <!--FINANCE TAB-->
+                        <li class="menu-title">Finance</li>
+                        <li>
+                            <a href="generate-salary.html">
+                                <i data-feather="file"></i>
+                                <span> Generate Salary</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="generate-emi.html">
+                                <i data-feather="file-minus"></i>
+                                <span> Generate EMI</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="set-salary.html">
+                                <i data-feather="file-plus"></i>
+                                <span> Set Salary</span>
+                            </a>
+                        </li>
+                        <!--END FINANCE TAB-->
+                        <!--LEAVE TAB-->
+                        <li class="menu-title">Leave</li>
+                        <li>
+                            <a href="apply-leave.html">
+                                <i data-feather="tag"></i>
+                                <span>Apply Leave </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="approve-leave.html">
+                                <i data-feather="check-square"></i>
+                                <span> Approve Leave </span>
+                            </a>
+                        </li>
+                        <!--END LEAVE TAB-->
+                    </ul>
+                </div>
+                <!-- End Sidebar -->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- Sidebar -left -->
+
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page ">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row page-title align-items-center mb-3">
+                    <div class="col-sm-4 col-xl-6">
+                        <h4 class="mb-1 mt-0">INVESTOR</h4>
+
+                    </div>
+
+                </div>
+                <!--View Attendance Table-->
+                <div class="container">
+                    <!--*****No Investment Start*****-->
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            
+                                <div class="col-sm-5">
+                                    <h2>View <b>Returns</b></h2>
+                                </div>
+                            
+                        </div>
+                        <div class="card py-4 ml-2">No Investment Found to display</div>
+                    </div>
+                    <!--*****No Investment End*****-->
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <h2>View <b>Returns</b></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover css-serial">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Principle</th>
+                                        <th>Intrest</th>
+                                        <th>Pay Date</th>
+                                        <th>Pay Amount</th>
+                                        <th>Balance</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>100000</td>
+                                        <td>1000</td>
+                                        <td>04/10/2013</td>
+                                        <td>11000</td>
+                                        <td>90000</td>
+
+                                    </tr>
+
+                                </tbody>
+                            </table>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <!-- Footer Start -->
+    <footer class="footer footer-custom">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    2020 &copy; Aksaya. All Rights Reserved. Crafted with by <a href="https://kgetechnologies.com"
+                        target="_blank">kgetechnologies.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end Footer -->
+
+
+    <!-- Scripts -->
+    <script src="Scripts/vendor.min.js"></script>
+    <script src="Scripts/app.min.js"></script>
+
+
+
+</body>
+
+</html>

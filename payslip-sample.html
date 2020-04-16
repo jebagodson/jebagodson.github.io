@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AKSAYA - Payslip</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="kgetechnologies.com" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="images/aksaya logo.png">
+
+
+    <style>
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+            font-size: 1rem;
+            font-weight: 400;
+            line-height: 1.5;
+            color: #212529;
+            text-align: left;
+            background-color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: .5rem;
+            line-height: 1.2;
+            margin-top: 0;
+        }
+
+        h4 {
+            font-size: 1.5rem;
+            line-height: 1.2;
+            margin-top: 0;
+        }
+
+        table {
+            border-collapse: collapse;
+        }
+
+        .col-6 {
+            flex: 0 0 45%;
+            max-width: 50%;
+            position: relative;
+            width: 100%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .col-xs-2 {
+            flex: 0 0 10%;
+            padding-right: 15px;
+            padding-left: 15px;
+        }
+
+        .col-xs-3 {
+            flex: 0 0 17%;
+            padding-right: 0px;
+            padding-left: 35px;
+        }
+
+        .payslip-bg {
+            background-color: #ffffff;
+        }
+
+        .payslip {
+            width: 250mm;
+            height: 297mm;
+            border: 2px solid #000000;
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            background-color: #fff;
+        }
+
+        .payslip-logo {
+            font-weight: bolder;
+            align-self: center;
+
+        }
+
+        .payslip-style {
+            border: none;
+            border-color: #fff;
+        }
+
+        .logo-style-payslip {
+            width: 200px;
+            height: 200px;
+        }
+
+        .cell-one {
+            width: 22rem;
+            text-align: center;
+            border-left: 1px solid #000000;
+            padding-right: 1rem;
+        }
+        .cell-one-1 {
+            width: 22rem;
+            text-align: center;
+            padding-right: 1rem;
+        }
+
+        .cell-two {
+            width: 8rem;
+            text-align: center;
+            border-left: 1px solid #000000;
+            padding-right: 1rem;
+        }
+
+        .cell-border {
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+            border-left: 1px solid #000000;
+        }
+        .cell-border-2 {
+            border-top: 1px solid #000000;
+            border-bottom: 1px solid #000000;
+            border-right: 1px solid #000000;
+            border-left: 0px;
+        }
+        .cell-border-left {
+            border-left: 1px solid #000000;
+            border-right: 1px solid #000000;
+            padding-right: 1rem;
+        }
+
+        .cell-bold {
+            font-weight: bold;
+        }
+
+        .p-5 {
+            padding: 3rem;
+        }
+
+        .container {
+            max-width: 960px;
+        }
+
+        .ml {
+            margin-left: 1rem;
+        }
+
+        .text-center {
+            text-align: center;
+        }
+
+        .text-right {
+            text-align: right;
+        }
+
+        .mb-5 {
+            margin-bottom: 3rem;
+        }
+
+        .mb-2 {
+            margin-bottom: .5rem;
+        }
+
+        .row {
+            display: flex;
+            flex-wrap: wrap;
+            margin-right: -15px;
+            margin-left: -15px;
+        }
+
+        .d-flex {
+            display: flex;
+        }
+
+        .mr-5 {
+            margin-right: 3rem;
+        }
+
+        .ml-4 {
+            margin-left: 1.5rem;
+        }
+
+        .px-3 {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+
+        .space-one {
+            padding-left: 1rem;
+            padding-right: 5rem;
+        }
+
+        .space-two {
+            padding-right: 3rem;
+        }
+
+        .space-three {
+            padding-left: 11rem;
+            padding-right: 3rem;
+        }
+
+        .space-four {
+            padding-left: 1rem;
+        }
+        .text-white{
+            color: white;
+        }
+        .ml-1{
+            margin-left: -2px;
+        }
+    </style>
+
+</head>
+
+<body class="payslip-bg">
+    <div class="container ml">
+        <div class="payslip p-5">
+            <div>
+                <table>
+                    <tbody>
+                        <td>
+                            <img src="images/aksaya logo.png" class="logo-style-payslip" alt="">
+                        </td>
+                        <td>
+                            <h1 class="payslip-logo">AKSAYA</h1>
+                        </td>
+                    </tbody>
+                    <table>
+            </div>
+            <div class="text-center">
+                <h4 class="mb-5 cell-bold">Pay Slip for the period of March 2020</h4>
+            </div>
+
+            <div class="mb-5">
+                <table class="mb-5">
+                    <tbody>
+                        <tr>
+                            <td class="space-one">Employee ID</td>
+                            <td class="space-two">: 1012</td>
+                            <td class="space-three">Department</td>
+                            <td class="space-four">: Staff</td>
+                        </tr>
+                        <tr>
+                            <td class="space-one">Name</td>
+                            <td class="space-two">: Subrahmanya Lakshmi Krishna</td>
+                            <td class="space-three">Designation</td>
+                            <td class="space-four">: HR</td>
+                        </tr>
+                        <tr>
+                            <td class="space-one">Pay Date</td>
+                            <td class="space-two">: 05/03/2020</td>
+                            <td class="space-three">Date of Joining</td>
+                            <td class="space-four">: 20/06/2019</td>
+                        </tr>
+                        <tr>
+                            <td class="space-one">Days Worked</td>
+                            <td class="space-two">: 23</td>
+                            <td class="space-three">Bank A/C No.</td>
+                            <td class="space-four">: xxxxxxxxxxxx</td>
+                        </tr>
+                        <tr>
+                            <td class="space-one">Days Paid</td>
+                            <td class="space-two">: 24</td>
+                            <td class="space-three">PF Account Number</td>
+                            <td class="space-four">: TN MAS 054110 000</td>
+                        </tr>
+                        <tr>
+                            <td class="space-one">Loss of Pay</td>
+                            <td class="space-two">: 5</td>
+                            <td class="space-three">ESI Account Number</td>
+                            <td class="space-four">: 31/123456/000/0001</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+
+
+
+            <!--==================================-->
+            <!--Seperate Div for Debit and Credit-->
+            <!--==================================-->
+            <div class="d-flex">
+                <table class="cell-border mb-5">
+                    <thead class="cell-border">
+                        <tr>
+                            <th class="cell-one">Earnings</th>
+                            <th class="cell-two cell-border-left">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-3">Basic Pay</td>
+                            <td class="text-right cell-border-left">10,000.00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3">Deamess Allowance</td>
+                            <td class="text-right cell-border-left">5,000.00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3">Conveyance Allowance</td>
+                            <td class="text-right cell-border-left">2,000.00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3">Medical Allowance</td>
+                            <td class="text-right cell-border-left">1,500.00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3">House Rent Allowance</td>
+                            <td class="text-right cell-border-left">4,000.00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3">Food Allowance</td>
+                            <td class="text-right cell-border-left">600.00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 cell-border cell-bold">Total Earnings (Rounded)</td>
+                            <td class="text-right cell-border cell-bold px-3 cell-border-left">23,100.00</td>
+                        </tr>
+                        <tr>
+                            <td class="text-white">-</td>
+                            <td class="text-white">-</td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+                <table class="cell-border-2 mb-5 ml-1">
+                    <thead class="cell-border-2">
+                        <tr>
+                            <th class="cell-one-1">Deductions</th>
+                            <th class="cell-two">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="px-3">Professional Tax</td>
+                            <td class="text-right cell-border-left">200.00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 ">Provident Fund</td>
+                            <td class="text-right cell-border-left">1,200.00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 ">Employee State Insurance</td>
+                            <td class="text-right cell-border-left">393.75</td>
+                        </tr>
+                       
+                        <!--Empty cell style start-->
+                       <tr>
+                            <td class="px-3 text-white">-</td>
+                            <td class="text-right text-white cell-border-left">-</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 text-white">-</td>
+                            <td class="text-right text-white cell-border-left">-</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 text-white">-</td>
+                            <td class="text-right text-white cell-border-left">-</td>
+                        </tr>
+                        <!--Empty cell style End-->
+
+                        <tr>
+                            <td class="px-3 cell-border-2 cell-bold">Total Deduction (Rounded)</td>
+                            <td class="text-right cell-border cell-bold px-3">1,794.00</td>
+                        </tr>
+                        <tr>
+                            <td class="px-3 cell-border-2 cell-bold">Net Pay (Rounded)</td>
+                            <td class="cell-two cell-bold text-right">21,306.00</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <!--=======================================-->
+            <!--Seperate Div for Debit and Credit Ends -->
+            <!--=======================================-->
+
+            <div class="text-center">
+                <span>THIS IS A SYSTEM GENERATED PAY SLIP SIGNATURE NOT REQUIRED</span>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

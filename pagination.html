@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AKSAYA - Dashboard</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="kgetechnologies.com" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="images/aksaya logo.png">
+
+
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet"
+        type="text/css" />
+        
+    <!--JQuery Pagination-->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <link href="Content/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/style.css" rel="stylesheet" type="text/css" />
+
+    <!--Script-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+    <script type="text/javascript">
+        var basUrl = '/';
+    </script>
+</head>
+
+<body>
+    <div id="wrapper">
+        <!--Header-part-->
+        <!-- Topbar Start -->
+        <div class="navbar navbar-expand flex-column flex-md-row navbar-custom">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <a href="Dashboard" class="navbar-brand mr-0 mr-md-2 logo">
+                    <span class="logo-lg">
+                        <img class="logo-style" src="images/aksaya logo.png" alt="logo" />
+                        <span class="d-inline h5 ml-1 text-logo">AKSAYA</span>
+                    </span>
+                    <span class="logo-sm">
+                        <img src="images/aksaya logo.png" alt="" height="24">
+                    </span>
+                </a>
+                <ul class="navbar-nav bd-navbar-nav flex-row list-unstyled menu-left mb-0">
+                    <li class="">
+                        <button class="button-menu-mobile open-left disable-btn">
+                            <i data-feather="menu" class="menu-icon"></i>
+                            <i data-feather="x" class="close-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+
+                <div class="navbar-nav flex-row d-flex list-unstyled topnav-menu float-right mb-0">
+                    <div class="media user-profile mt-2 mb-2">
+
+                        <img src="images/avatar-7.jpg" class="avatar-sm rounded-circle mr-2" alt="Model.DisplayName" />
+                        <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2" alt="Model.DisplayName" />
+
+                        <div class="media-body">
+                            <h6 class="pro-user-name mt-0 mb-0">Vikash Raaj</h6>
+                            <span class="pro-user-desc">SuperAdmin</span>
+                        </div>
+                        <div class="dropdown align-self-center profile-dropdown-menu">
+                            <a class="dropdown-toggle mr-0" data-toggle="dropdown" href="#" role="button"
+                                aria-haspopup="false" aria-expanded="false">
+                                <span data-feather="chevron-down"></span>
+                            </a>
+                            <div class="dropdown-menu profile-dropdown dropdown-position">
+                                <a href="/Register/Edit/1" class="dropdown-item notify-item">
+                                    <i data-feather="user" class="icon-dual icon-xs mr-2"></i>
+                                    <span>My Account</span>
+                                </a>
+                                <a href="#" class="dropdown-item notify-item">
+                                    <i data-feather="help-circle" class="icon-dual icon-xs mr-2"></i>
+                                    <span data-toggle="modal" data-target="#exampleModal">Support</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="/Login/Logout" class="dropdown-item notify-item">
+                                    <i data-feather="log-out" class="icon-dual icon-xs mr-2"></i>
+                                    <span>Logout</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Popup Window -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">CONTACT</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <a class="align-self-center" href="https://kgetechnologies.com"
+                            target="_blank">kgetechnologies.com</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Popup Window END-->
+
+        <!--sidebar-menu-->
+        <!-- Left Sidebar -->
+        <div class="left-side-menu">
+            <div class="sidebar-content">
+                <!--- Sidemenu -->
+                <div id="sidebar-menu" class="slimscroll-menu">
+                    <ul class="metismenu" id="menu-bar">
+                        <li class="menu-title">Navigation</li>
+                        <li>
+                            <a href="/Dashboard">
+                                <i data-feather="home"></i>
+                                <span> Dashboard </span>
+                            </a>
+                        </li>
+                        <!--USER TAB-->
+
+                        <li class="menu-title">User</li>
+                        <li>
+                            <a href="/Register">
+                                <i data-feather="user"></i>
+                                <span> Create User </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Register/Manage">
+                                <i data-feather="edit"></i>
+                                <span> Manage User </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Staff/PasswordReset">
+                                <i data-feather="key"></i>
+                                <span> Password Reset </span>
+                            </a>
+                        </li>
+                        <!--END USER TAB-->
+
+                        <!--EMPLOYEE TAB-->
+                        <li class="menu-title">Employee</li>
+                        <li>
+                            <a href="/Attendance/Upload">
+                                <i data-feather="file-text"></i>
+                                <span> Download Attendance </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/PaySlip/ViewPayScale">
+                                <i data-feather="archive"></i>
+                                <span> Payslip View </span>
+                            </a>
+                        </li>
+                        <!--END EMPLOYEE TAB-->
+
+                        <!--INVESTOR TAB-->
+                        <li class="menu-title">Investor</li>
+                        <li>
+                            <a href="/Investment/Create">
+                                <i data-feather="activity"></i>
+                                <span> Create Investment </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Investment/GenerateReturns">
+                                <i data-feather="dollar-sign"></i>
+                                <span> Generate Returns </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Investment/DownloadReturns">
+                                <i data-feather="dollar-sign"></i>
+                                <span>Download Returns</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Investment/ViewReturns">
+                                <i data-feather="file"></i>
+                                <span> View Returns </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Investment/Approve">
+                                <i data-feather="check"></i>
+                                <span>Approve Investment </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Investment/Close">
+                                <i data-feather="x-square"></i>
+                                <span> Close Investment </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Investment/Manage">
+                                <i data-feather="layers"></i>
+                                <span> Manage Investment </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Investment/Plans">
+                                <i data-feather="layers"></i>
+                                <span> Manage Plans </span>
+                            </a>
+                        </li>
+
+                        <!--END INVESTOR TAB-->
+                        <!--FINANCE TAB-->
+                        <li class="menu-title">Finance</li>
+                        <li>
+                            <a href="/PaySlip/GenerateSalary">
+                                <i data-feather="file"></i>
+                                <span> Generate Salary</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/PaySlip/SetSalary">
+                                <i data-feather="file-plus"></i>
+                                <span>Salary Component</span>
+                            </a>
+                        </li>
+                        <!--END FINANCE TAB-->
+                        <!--LEAVE TAB-->
+                        <li class="menu-title">Leave</li>
+                        <li>
+                            <a href="/Leave/ApplyLeave">
+                                <i data-feather="tag"></i>
+                                <span>Apply Leave </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="/Leave/ApproveLeave">
+                                <i data-feather="check-square"></i>
+                                <span> Approve Leave </span>
+                            </a>
+                        </li>
+                        <!--END LEAVE TAB-->
+                    </ul>
+                </div>
+                <!-- End Sidebar -->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- Sidebar -left -->
+
+    </div>
+
+
+
+
+    <div class="content-page ">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row page-title align-items-center mb-3">
+                    <div class="col-sm-4 col-xl-6">
+                        <h4 class="mb-1 mt-0">USER MANAGEMENT</h4>
+                    </div>
+                </div>
+
+
+
+                <!--Manage User Table-->
+
+                <div class="container">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <h2><b>Investor</b></h2>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover css-serial myTable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Date of Joining</th>
+                                        <th>User Type</th>
+                                        <th>User Role</th>
+                                        <th>Job Role</th>
+                                        <th>Status</th>
+                                        <th>Click To</th>
+                                        <th>Edit Profile</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Investor Investor
+                                            </a>
+                                        </td>
+                                        <td>01-Jan-2020</td>
+                                        <td>Investor</td>
+                                        <td>Investor</td>
+                                        <td>Investor</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="Register/LockUser/8" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="Register/Edit/8" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Investor1 Investor1
+                                            </a>
+                                        </td>
+                                        <td>01-Jan-2020</td>
+                                        <td>Investor</td>
+                                        <td>Investor</td>
+                                        <td>Investor</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/9" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/9" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Investor2 Investor2
+                                            </a>
+                                        </td>
+                                        <td>01-Jan-2020</td>
+                                        <td>Investor</td>
+                                        <td>Investor</td>
+                                        <td>Investor</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/10" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/10" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Investor3 Investor3
+                                            </a>
+                                        </td>
+                                        <td>01-Jan-2020</td>
+                                        <td>Investor</td>
+                                        <td>Investor</td>
+                                        <td>Investor</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/11" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/11" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Investor4 Investor4
+                                            </a>
+                                        </td>
+                                        <td>01-Jan-2020</td>
+                                        <td>Investor</td>
+                                        <td>Investor</td>
+                                        <td>Investor</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/12" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/12" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Investor5 Investor5
+                                            </a>
+                                        </td>
+                                        <td>01-Jan-2020</td>
+                                        <td>Investor</td>
+                                        <td>Investor</td>
+                                        <td>Investor</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/13" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/13" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <h2><b>Staff</b></h2>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover css-serial myTable">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Date of Joining</th>
+                                        <th>User Type</th>
+                                        <th>User Role</th>
+                                        <th>Job Role</th>
+                                        <th>Status</th>
+                                        <th>Click To</th>
+                                        <th>Edit Profile</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Employee Staff
+                                            </a>
+                                        </td>
+                                        <td>01-Jan-2020</td>
+                                        <td>Staff</td>
+                                        <td>Employee</td>
+                                        <td>Employee</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/2" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/2" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> HR Staff
+                                            </a>
+                                        </td>
+                                        <td>01-Jan-2020</td>
+                                        <td>Staff</td>
+                                        <td>HR</td>
+                                        <td>HR</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/3" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/3" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Supervisor Staff
+                                            </a>
+                                        </td>
+                                        <td>01-Jan-2020</td>
+                                        <td>Staff</td>
+                                        <td>Supervisor</td>
+                                        <td>Supervisor</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/4" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/4" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Manager Staff
+                                            </a>
+                                        </td>
+                                        <td>01-Jan-2020</td>
+                                        <td>Staff</td>
+                                        <td>Manager</td>
+                                        <td>Manager</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/5" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/5" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Accountant Staff
+                                            </a>
+                                        </td>
+                                        <td>01-Jan-2020</td>
+                                        <td>Staff</td>
+                                        <td>Accountant</td>
+                                        <td>Accountant</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/6" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/6" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Admin Staff
+                                            </a>
+                                        </td>
+                                        <td>01-Jan-2020</td>
+                                        <td>Staff</td>
+                                        <td>Admin</td>
+                                        <td>Admin</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/7" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/7" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Ariraman N
+                                            </a>
+                                        </td>
+                                        <td>02-Dec-2019</td>
+                                        <td>Staff</td>
+                                        <td>Manager</td>
+                                        <td>Assit Manager</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/14" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/14" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> yogeswaran k
+                                            </a>
+                                        </td>
+                                        <td>03-Mar-2020</td>
+                                        <td>Staff</td>
+                                        <td>Admin</td>
+                                        <td>lead</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/15" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/15" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> employee2 employee2
+                                            </a>
+                                        </td>
+                                        <td>02-Jan-2020</td>
+                                        <td>Staff</td>
+                                        <td>Employee</td>
+                                        <td>Developer</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/16" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/16" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Employee3Dec Employee3Dec
+                                            </a>
+                                        </td>
+                                        <td>03-Dec-2019</td>
+                                        <td>Staff</td>
+                                        <td>Employee</td>
+                                        <td>Developer</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/17" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/17" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> Employee5Dec Employee5Dec
+                                            </a>
+                                        </td>
+                                        <td>05-Dec-2019</td>
+                                        <td>Staff</td>
+                                        <td>Employee</td>
+                                        <td>Developer</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/18" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/18" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <a href="#">
+                                                <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2"
+                                                    alt="Avatar"> sample test
+                                            </a>
+                                        </td>
+                                        <td>14-Jan-2020</td>
+                                        <td>Staff</td>
+                                        <td>Employee</td>
+                                        <td>lead</td>
+
+                                        <td>
+                                            <span class="status text-success">&bull;</span>
+
+                                            Active
+                                        </td>
+                                        <td>
+                                            <a href="/Register/LockUser/19" class="edit-profile" title="Lock User"
+                                                data-toggle="tooltip"><i data-feather="lock"></i></a>
+                                        </td>
+                                        <td>
+                                            <a href="/Register/Edit/19" class="edit-profile" title="Edit Profile"
+                                                data-toggle="tooltip"><i data-feather="edit"></i></a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Footer Start -->
+    <footer class="footer footer-custom">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    2020 &copy; Aksaya. All Rights Reserved. Crafted with by <a href="https://kgetechnologies.com"
+                        target="_blank">kgetechnologies.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end Footer -->
+    <!-- Scripts -->
+    <script src="Scripts/vendor.min.js"></script>
+    <script src="Scripts/app.min.js"></script>
+
+    <!--JQuery Datepicker-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    
+    <!--JQuery Pagination-->
+    <script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+
+    <script src="Scripts/Custom.js"></script>
+    <script src="Scripts/Api.js"></script>
+
+
+</body>
+
+</html>

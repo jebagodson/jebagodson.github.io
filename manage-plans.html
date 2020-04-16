@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AKSAYA - Investor</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="kgetechnologies.com" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="images/aksaya logo.png">
+
+    <!-- App css -->
+    <link href="Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css" rel="stylesheet"
+        type="text/css" />
+    <link href="Content/app.min.css" rel="stylesheet" type="text/css" />
+    <link href="Content/style.css" rel="stylesheet" type="text/css" />
+
+    <!--Script-->
+    <script src='https://www.google.com/recaptcha/api.js'></script>
+
+</head>
+
+<body>
+
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <div class="navbar navbar-expand flex-column flex-md-row navbar-custom">
+            <div class="container-fluid">
+                <!-- LOGO -->
+                <a href="index.html" class="navbar-brand mr-0 mr-md-2 logo">
+                    <span class="logo-lg">
+                        <img class="logo-style" src="images/aksaya logo.png" alt="logo" />
+                        <span class="d-inline h5 ml-1 text-logo">AKSAYA</span>
+                    </span>
+                    <span class="logo-sm">
+                        <img src="images/aksaya logo.png" alt="" height="24">
+                    </span>
+                </a>
+                <ul class="navbar-nav bd-navbar-nav flex-row list-unstyled menu-left mb-0">
+                    <li class="">
+                        <button class="button-menu-mobile open-left disable-btn">
+                            <i data-feather="menu" class="menu-icon"></i>
+                            <i data-feather="x" class="close-icon"></i>
+                        </button>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ml-auto d-flex topnav-menu float-right mb-0">
+                    <li class="dropdown notification-list" data-toggle="tooltip" data-placement="left" title=""
+                        data-original-title="3 new unread notifications">
+                        <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false"><i data-feather="message-square"
+                                class="menu-icon"></i>
+
+                            <span class="noti-icon-badge"></span>
+                        </a>
+                        <div class="dropdown-menu dropdown-menu-right dropdown-lg">
+
+                            <!-- item-->
+                            <div class="dropdown-item noti-title border-bottom">
+                                <h5 class="m-0 font-size-16">
+                                    <span class="float-right">
+                                        <a href="" class="text-dark">
+                                            <small>Clear All</small>
+                                        </a>
+                                    </span>Inbox Message
+                                </h5>
+                            </div>
+
+                            <div class="slimScrollDiv"
+                                style="position: relative; overflow: hidden; width: auto; height: 507px;">
+                                <div class="slimscroll noti-scroll"
+                                    style="overflow: hidden; width: auto; height: 507px;">
+
+                                    <!-- item-->
+                                    <a href="inbox.html" class="dropdown-item notify-item border-bottom active">
+                                        <div class="notify-icon bg-success"><i data-feather="user"></i>
+                                        </div>
+                                        <p class="notify-details">Message Jaclyn Brunswick<small class="text-muted">1
+                                                min
+                                                ago</small></p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="inbox.html" class="dropdown-item notify-item border-bottom">
+                                        <div class="notify-icon bg-danger"><i data-feather="user"></i>
+                                        </div>
+                                        <p class="notify-details">Message Caleb Flakelar<small class="text-muted">4 days
+                                                ago</small></p>
+                                    </a>
+
+                                    <!-- item-->
+                                    <a href="inbox.html" class="dropdown-item notify-item">
+                                        <div class="notify-icon bg-primary">
+                                            <i data-feather="user"></i>
+                                        </div>
+                                        <p class="notify-details">Message Carlos Crouch
+                                            <small class="text-muted">13 days ago</small>
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="slimScrollBar"
+                                    style="background: rgb(158, 165, 171); width: 4px; position: absolute; top: 0px; opacity: 0.4; display: block; border-radius: 7px; z-index: 99; right: 1px;">
+                                </div>
+                                <div class="slimScrollRail"
+                                    style="width: 4px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;">
+                                </div>
+                            </div>
+
+                            <!-- All-->
+                            <a href="inbox.html"
+                                class="dropdown-item text-center text-primary notify-item notify-all border-top">
+                                View all
+                                <i class="fi-arrow-right"></i>
+                            </a>
+
+                        </div>
+                    </li>
+                </ul>
+
+                <div class="media user-profile mt-2 mb-2">
+                    <img src="images/avatar-7.jpg" class="avatar-sm rounded-circle mr-2" alt="Aksaya" />
+                    <img src="images/avatar-7.jpg" class="avatar-xs rounded-circle mr-2" alt="Aksaya" />
+
+                    <div class="media-body">
+                        <h6 class="pro-user-name mt-0 mb-0">Nik Patel</h6>
+                        <span class="pro-user-desc">Administrator</span>
+                    </div>
+                    <div class="dropdown align-self-center profile-dropdown-menu">
+                        <a class="dropdown-toggle mr-0" data-toggle="dropdown" href="#" role="button"
+                            aria-haspopup="false" aria-expanded="false">
+                            <span data-feather="chevron-down"></span>
+                        </a>
+                        <div class="dropdown-menu profile-dropdown dropdown-position">
+                            <a href="myaccount.html#" class="dropdown-item notify-item">
+                                <i data-feather="user" class="icon-dual icon-xs mr-2"></i>
+                                <span>My Account</span>
+                            </a>
+                            <a href="#" class="dropdown-item notify-item">
+                                <i data-feather="help-circle" class="icon-dual icon-xs mr-2"></i>
+                                <span data-toggle="modal" data-target="#exampleModal">Support</span>
+                            </a>
+                            <div class="dropdown-divider"></div>
+                            <a href="#" class="dropdown-item notify-item">
+                                <i data-feather="log-out" class="icon-dual icon-xs mr-2"></i>
+                                <span>Logout</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Popup Window -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">CONTACT</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <a class="align-self-center" href="https://kgetechnologies.com"
+                            target="_blank">kgetechnologies.com</a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Popup Window END-->
+
+        <!-- Left Sidebar -->
+        <div class="left-side-menu">
+            <div class="sidebar-content">
+                <!--- Sidemenu -->
+                <div id="sidebar-menu" class="slimscroll-menu">
+                    <ul class="metismenu" id="menu-bar">
+                        <li class="menu-title">Navigation</li>
+
+                        <li>
+                            <a href="index.html">
+                                <i data-feather="home"></i>
+                                <span> Dashboard </span>
+                            </a>
+                        </li>
+                        <!--USER TAB-->
+                        <li class="menu-title">User</li>
+                        <li>
+                            <a href="pages-register.html">
+                                <i data-feather="user"></i>
+                                <span> Create User </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-user.html">
+                                <i data-feather="edit"></i>
+                                <span> Manage User </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="password-reset.html">
+                                <i data-feather="key"></i>
+                                <span> Password Reset </span>
+                            </a>
+                        </li>
+                        <!--END USER TAB-->
+                        <!--EMPLOYEE TAB-->
+                        <li class="menu-title">Employee</li>
+                        <li>
+                            <a href="upload-attendance.html">
+                                <i data-feather="file-text"></i>
+                                <span> Upload Attendance </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="payscale-view.html">
+                                <i data-feather="archive"></i>
+                                <span> Payslip View </span>
+                            </a>
+                        </li>
+                        <!--END EMPLOYEE TAB-->
+                        <!--INVESTOR TAB-->
+                        <li class="menu-title">Investor</li>
+                        <li>
+                            <a href="create-investment.html">
+                                <i data-feather="activity"></i>
+                                <span> Create Investment </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="generate-returns.html">
+                                <i data-feather="dollar-sign"></i>
+                                <span> Generate Returns </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="view-returns.html">
+                                <i data-feather="file"></i>
+                                <span> View Returns </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="approve-investment.html">
+                                <i data-feather="check"></i>
+                                <span>Approve Investment </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="close-investment.html">
+                                <i data-feather="x-square"></i>
+                                <span> Close Investment </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="manage-investment.html">
+                                <i data-feather="layers"></i>
+                                <span> Manage Investment </span>
+                            </a>
+                        </li>
+                        <li class="mm-active">
+                            <a href="manage-plans.html" class="active">
+                                <i data-feather="layers"></i>
+                                <span> Manage Plans </span>
+                            </a>
+                        </li>
+                        <!--END INVESTOR TAB-->
+                        <!--FINANCE TAB-->
+                        <li class="menu-title">Finance</li>
+                        <li>
+                            <a href="generate-salary.html">
+                                <i data-feather="file"></i>
+                                <span> Generate Salary</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="generate-emi.html">
+                                <i data-feather="file-minus"></i>
+                                <span> Generate EMI</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="set-salary.html">
+                                <i data-feather="file-plus"></i>
+                                <span> Set Salary</span>
+                            </a>
+                        </li>
+                        <!--END FINANCE TAB-->
+                        <!--LEAVE TAB-->
+                        <li class="menu-title">Leave</li>
+                        <li>
+                            <a href="apply-leave.html">
+                                <i data-feather="tag"></i>
+                                <span>Apply Leave </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="approve-leave.html">
+                                <i data-feather="check-square"></i>
+                                <span> Approve Leave </span>
+                            </a>
+                        </li>
+                        <!--END LEAVE TAB-->
+                    </ul>
+                </div>
+                <!-- End Sidebar -->
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <!-- Sidebar -left -->
+    </div>
+    <!-- Left Sidebar End -->
+
+    <!-- ============================================================== -->
+    <!-- Start Page Content here -->
+    <!-- ============================================================== -->
+    <div class="content-page ">
+        <div class="content">
+            <div class="container-fluid">
+                <div class="row page-title align-items-center mb-3">
+                    <div class="col-sm-4 col-xl-6">
+                        <h4 class="mb-1 mt-0">INVESTOR</h4>
+                    </div>
+
+                </div>
+                <!--View Attendance Table-->
+                <div class="container">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <h2>Create <b>Plan</b></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="text-right mb-3">
+                            <a class="btn btn-primary text-white" type="button" data-toggle="collapse"
+                                data-target="#addPlans" aria-expanded="false" aria-controls="addPlans">
+                                <i data-feather="plus" aria-hidden="true"></i>Create</a>
+                        </div>
+                        <div class="collapse" id="addPlans">
+                            <div class="card card-body">
+                                <div class="row mb-5">
+                                    <div class="col-sm-4 px-3 mb-3">
+                                        <div class="form-group mb-4">
+                                            <label>Plan Name</label>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label class="control-label" for="ValidFrom">Valid From</label>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label class="control-label" for="ValidTill">Valid Till</label>
+                                        </div>
+                                        <div class="form-group mb-4">
+                                            <label>Beneficiary Interest</label>
+                                        </div>
+                                    </div>
+                                    <div class="col-sm-4 px-3 mb-3">
+                                        <div class="form-group">
+                                            <input type="text" class="form-control" placeholder="Plan Name">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" id="validFrom" name="validFrom"
+                                                placeholder="DD/MM/YYY" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <input class="form-control" id="validTill" name="validTill"
+                                                placeholder="DD/MM/YYY" type="text">
+                                        </div>
+                                        <div class="form-group">
+                                            <input type="number" class="form-control" placeholder="Interest">
+                                        </div>
+
+                                    </div>
+                                    <div class="col-sm-4 px-3 mb-3">
+
+                                        <div class="form-group per-height">
+                                            %
+                                        </div>
+
+                                    </div>
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table">
+
+                                        <tbody>
+                                            <tr>
+                                                <th class="text-center" rowspan="2">Month</th>
+                                                <th class="text-center space" rowspan="2">Settlement %
+                                                </th>
+
+                                                <th colspan="3" class="text-center space">Compenstation Benefit For</th>
+                                                <th></th>
+
+                                            </tr>
+                                            <tr>
+
+                                                <td class="text-right">Past Months</td>
+                                                <td>Current Days</td>
+
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">2</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">3</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">4</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">5</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">6</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">7</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">8</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">9</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">10</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">11</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">12</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">13</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">14</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">15</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">16</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">17</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">18</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">19</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">20</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">21</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">22</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">23</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">24</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">25</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">26</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">27</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">28</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">29</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">30</td>
+                                                <td class="plan-field"> <input type="text" class="form-control-create">%</td>
+                                                <td><input class="form-check-input ben-table" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                                <td><input class="form-check-input ben-table1" type="checkbox" value=""
+                                                        id="defaultCheck1"></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                    <div>
+                                        <button type="button" class="btn btn-primary btn-block">Create</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <h2>Manage <b>Plans</b></h2>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="table-responsive">
+                            <table class="table table-striped table-hover css-serial">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Plan Names</th>
+                                        <th>Created On</th>
+                                        <th>Number of Investments</th>
+                                        <th>Status</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>Plan 1</a></td>
+                                        <td>12/03/2017</td>
+                                        <td>3 </td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary">Disable</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Plan 2</a></td>
+                                        <td>18/5/2018</td>
+                                        <td>2</td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary">Disable</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Plan 3</a></td>
+                                        <td>24/11/2019</td>
+                                        <td>6</td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-secondary disabled">Disable</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Plan 4</a></td>
+                                        <td>18/12/2019</td>
+                                        <td>1</td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-primary">Disable</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Plan 5</a></td>
+                                        <td>16/01/2020</td>
+                                        <td>3</td>
+                                        <td></td>
+                                        <td>
+                                            <button type="button" class="btn btn-secondary disabled">Disable</button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="table-wrapper">
+                        <div class="table-title">
+                            <div class="row">
+                                <div class="col-sm-5">
+                                    <h2>Plans Yet to <b>Approve</b></h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3 table-responsive">
+                            <table class="table table-striped table-hover css-serial">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Plan Name</th>
+                                        <th>Plan ID</th>
+                                        <th>Created On</th>
+                                        <th>Created By</th>
+                                        <th>Download Plan</th>
+                                        <th>Action</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td>Plan 1</a></td>
+                                        <td>123456</td>
+                                        <td>21/02/2020</td>
+                                        <td>Adams</td>
+                                        <td><a href="#" download>Download</a></td>
+                                        <td>
+                                            <a class="approve" title="Approve" data-toggle="modal"
+                                                data-target="#approveReason"><i data-feather="check-square"></i></a>
+                                            <a class="delete" title="Delete" data-toggle="modal"
+                                                data-target="#denyReason"><i data-feather="x-square"></i></a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>Plan 2</a></td>
+                                        <td>654321</td>
+                                        <td>20/02/2020</td>
+                                        <td>Adams</td>
+                                        <td><a href="#" download>Download</a></td>
+                                        <td>
+                                            <a class="approve" title="Approve" data-toggle="modal"
+                                                data-target="#approveReason"><i data-feather="check-square"></i></a>
+                                            <a class="delete" title="Delete" data-toggle="modal"
+                                                data-target="#denyReason"><i data-feather="x-square"></i></a>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer Start -->
+    <footer class="footer footer-custom">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-12">
+                    2020 &copy; Aksaya. All Rights Reserved. Crafted with by <a href="https://kgetechnologies.com"
+                        target="_blank">kgetechnologies.com</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- end Footer -->
+
+
+    <!-- Scripts -->
+    <script src="Scripts/vendor.min.js"></script>
+    <script src="Scripts/app.min.js"></script>
+
+    <!--JQuery Datepicker-->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"
+        integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+    <script src="Scripts/Custom.js"></script>
+</body>
+
+</html>
